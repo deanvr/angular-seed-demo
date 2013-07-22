@@ -3,8 +3,8 @@
 /* Filters */
 
 angular.module('myApp.filters', []).
-  filter('interpolate', ['version', function(version) {
-    return function(text) {
-      return String(text).replace(/\%VERSION\%/mg, version);
+  filter('EventType', ['$scope', function($scope) {
+    return function($scope) {
+      return $scope.ManagerOrganisationId.substring(0,1);
     }
   }]);

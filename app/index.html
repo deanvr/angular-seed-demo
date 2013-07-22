@@ -1,16 +1,21 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="FG.Alerts">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>Fleet alerts</title>
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
     
-    
-    <div ng-controller="MyCtrl1">
-        <input type="text" ng-model="message" />
-        <div>{{ message }}</div>
+
+    <div ng-controller="Alerts">
+        <button ng-click="fType=''">All</button>
+        <button ng-click="fType='order';">Orders</button>
+        <button ng-click="fType='delivery';">Deliveries</button>
+        <ul ng-repeat="alert in fleetAlerts | filter:fType">
+          <li alt='{{EventDate}} '>({{alert.ContentId}}) <strong>{{alert.ManagerOrganisationId}}</strong> | {{alert.AircraftCount}} | {{alert.EngineType}} | {{alert.Type}}     </li>
+        </ul>
+
     </div>
 
 
@@ -20,5 +25,6 @@
     <script src="js/controllers.js"></script>
     <script src="js/filters.js"></script>
     <script src="js/directives.js"></script>
+    <script src="js/factory.js"></script>
 </body>
 </html>
