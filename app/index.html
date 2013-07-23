@@ -12,14 +12,14 @@
         <button ng-click="fType=''">All</button>
         <button ng-click="fType='order';">Orders</button>
         <button ng-click="fType='delivery';">Deliveries</button>
-        <ul ng-repeat="alert in fleetAlerts | filter:fType">
+        <ul ng-animate="'animate'" ng-repeat="alert in fleetAlerts | filter:fType">
           <li alt='{{EventDate}} '>({{alert.ContentId}}) <strong>{{alert.ManagerOrganisationId}}</strong> | {{alert.AircraftCount}} | {{alert.EngineType}} | {{alert.Type}}     </li>
         </ul>
 
     </div>
 
 
-    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/services.js"></script>
     <script src="js/controllers.js"></script>
