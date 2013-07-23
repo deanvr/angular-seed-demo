@@ -64,6 +64,7 @@
     <Content Include="app\js\app.js" />
     <Content Include="app\js\controllers.js" />
     <Content Include="app\js\directives.js" />
+    <Content Include="app\js\factory.js" />
     <Content Include="app\js\filters.js" />
     <Content Include="app\js\services.js" />
     <Content Include="app\lib\angular\angular-cookies.js" />
